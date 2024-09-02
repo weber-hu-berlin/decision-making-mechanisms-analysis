@@ -93,7 +93,7 @@ def preference_approval_voting_calculation(input_file='survey_data.json', output
                      x='Project',
                      y='Approval Score',
                      labels={'Project': 'Project', 'Approval Score': 'Approval Score'},
-                     title='Chart 11: Preference Approval Voting Results: Approval Score per Project')
+                     title='Chart 9: Preference Approval Voting Results: Approval Score per Project')
 
     # Save the bar chart as an HTML file
     fig_bar.write_html(os.path.join(output_folder, 'preference_approval_voting_results_plot.html'))
@@ -104,7 +104,7 @@ def preference_approval_voting_calculation(input_file='survey_data.json', output
                              y='Count',
                              color='Rank',
                              labels={'Project': 'Project', 'Count': 'Number of Approvals', 'Rank': 'Preference Rank'},
-                             title='Chart 12: Preference Approval Voting Results: Approval Breakdown by Rank')
+                             title='Chart 10: Preference Approval Voting Results: Approval Breakdown by Rank')
 
     fig_stacked_bar.update_layout(barmode='stack')
 

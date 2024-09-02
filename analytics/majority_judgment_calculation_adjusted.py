@@ -71,36 +71,15 @@ def majority_judgment_calculation(input_file='survey_data.json', output_folder='
                   color='Rating',
                   orientation='h',
                   labels={'Count': 'Number of Ratings', 'Project': 'Project'},
-                  title='Chart 9: Majority Judgment Results: Diverging Bar Chart of Ratings',
+                  title='Chart 8: Majority Judgment Results: Diverging Bar Chart of Ratings',
                   color_discrete_map={'Positive': 'green', 'Negative': 'red'})
 
     # Save the Diverging Bar Chart as an HTML file
     fig1.write_html(os.path.join(output_folder, 'majority_judgment_diverging_bar_chart.html'))
 
-    # Prepare data for Box Plot
-    box_plot_data = pd.DataFrame()
-    for col in rating_columns:
-        project_name = col.replace('project_rating_', '')  # Extract the project name
-        box_plot_data = pd.concat([box_plot_data, pd.DataFrame({'Project': project_name, 'Rating': data[col]})], axis=0)
-
-    # Drop null or invalid ratings from the box plot data
-    box_plot_data = box_plot_data[box_plot_data['Rating'].isin(expected_ratings)]
-
-    # Plotting Box Plot with Plotly
-    fig2 = px.box(box_plot_data,
-                  x='Project',
-                  y='Rating',
-                  color='Project',
-                  labels={'Rating': 'Rating Category', 'Project': 'Project'},
-                  title='Chart 10: Majority Judgment Results: Box Plot of Ratings')
-
-    # Save the Box Plot as an HTML file
-    fig2.write_html(os.path.join(output_folder, 'majority_judgment_box_plot.html'))
-
     # Display the plots (Optional for local testing)
     if showResults:
         fig1.show()
-        fig2.show()
 
 # Example usage:
 # majority_judgment_calculation()

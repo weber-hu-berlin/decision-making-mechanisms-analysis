@@ -45,7 +45,7 @@ def preferred_project_votes_calculation(input_file='survey_data.json', output_fo
     fig_bar = px.bar(preferred_project_votes_df,
                      x='Project',
                      y='Votes',
-                     title='Chart 13: Votes by Preferred Project')
+                     title='Chart 11: Votes by Preferred Project')
 
     # Save the bar chart as an HTML file
     fig_bar.write_html(os.path.join(output_folder, 'preferred_project_votes_plot.html'))
@@ -68,7 +68,7 @@ def preferred_project_votes_calculation(input_file='survey_data.json', output_fo
             radialaxis=dict(visible=True)
         ),
         showlegend=False,
-        title='Chart 14: Votes by Preferred Project (Radar Chart)'
+        title='Chart 12: Votes by Preferred Project (Radar Chart)'
     )
 
     # Save the radar chart as an HTML file

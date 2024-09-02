@@ -124,7 +124,7 @@ def borda_count_calculation(input_file='survey_data.json', output_folder='analyt
                      y='Contribution',
                      color='Sentiment',
                      labels={'Contribution': 'Contribution', 'Project': 'Project'},
-                     title='Chart 17: Contribution Comparison by Sentiment for Each Project'
+                     title='Chart 15: Contribution Comparison by Sentiment for Each Project'
                      )
 
     # Save the box plot as an HTML file

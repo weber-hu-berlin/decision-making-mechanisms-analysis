@@ -48,7 +48,7 @@ def range_voting_calculation(input_file='survey_data.json', output_folder='analy
                      x='Project',
                      y='Total Score',
                      labels={'Project': 'Project', 'Total Score': 'Total Score'},
-                     title='Chart 15: Range Voting Results: Total Score per Project')
+                     title='Chart 13: Range Voting Results: Total Score per Project')
 
     # Save the bar chart as an HTML file
     fig_bar.write_html(os.path.join(output_folder, 'range_voting_results_plot.html'))
@@ -62,7 +62,7 @@ def range_voting_calculation(input_file='survey_data.json', output_folder='analy
                      x='Project',
                      y='Score',
                      labels={'Project': 'Project', 'Score': 'Score'},
-                     title='Chart 16: Range Voting Results: Score Distribution per Project')
+                     title='Chart 14: Range Voting Results: Score Distribution per Project')
 
     # Save the box plot as an HTML file
     fig_box.write_html(os.path.join(output_folder, 'range_voting_results_box_plot.html'))
